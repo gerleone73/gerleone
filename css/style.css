@@ -78,6 +78,38 @@ html, body {
     margin: 0;
 }
 
+#bgchange{
+
+   position: fixed;
+    left: 50%;
+     -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);    top:75%;
+    font-family: 'Gentium Basic', serif;
+
+  top:5%;
+  text-transform: uppercase;
+  font-size: 1em;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+ 
+  z-index:1000;
+  color:#c5c5c5;;
+  width:13em;
+  line-height: 3em;
+  text-align: center;
+   border: 1px solid #c5c5c5;
+   
+}
+
+#bgchange:hover {
+
+  cursor: pointer;
+  color: white;
+   border: 1px solid white;
+}
+
+
+
 
 
 .centered-and-cropped { 
@@ -259,7 +291,7 @@ html, body {
 
 
 
-.masthead{
+.norm{
   background-image: url(http://www.icanbecreative.com/res/cinemagraphs/cinematography-gifs-9.gif);
     position: fixed; 
     background-size: cover;
@@ -277,6 +309,28 @@ html, body {
   z-index:-1;
   text-align: center;
 
+}
+.jack{
+  background-image:url(http://all-that-is-interesting.com/wordpress/wp-content/uploads/2013/06/kubrick-cinemagraphs-shining-4.gif);
+   position: fixed; 
+    background-size: cover;
+   -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-repeat: no-repeat;
+    color:white;
+  top: 0; 
+  left: 0; 
+  
+  /* Preserve aspet ratio */
+  min-width: 100%;
+  min-height: 100%;
+  z-index:-1;
+  text-align: center;
+}
+
+.none{
+  display:none;
 }
 
 .masthead-intro{
@@ -457,20 +511,32 @@ height: auto;}
 
 
 
-.question{
+dt{
+  cursor: pointer;
+  background: #e3e3e3;
+    border-bottom: 1px solid #c5c5c5;
+    border-top: 1px solid white;
   font-family: 'Stint Ultra Expanded', cursive;
   letter-spacing: 0.05em;
   font-size: 1.25em;
   line-height: 1.5em;
-  padding-left:0;
+  padding-left:.5em;
   margin-left: 0;
+ 
 }
 
-.answer{
-    font-weight: 300;
+dd{
+    font-weight: 600;
     letter-spacing: 0.05em;
-    line-height: 1.5em;
-    margin-bottom: 1em;
+    line-height: 2em;
+    padding-left:.75em;
+
+  
+}
+
+
+.hide{
+  display:none;
 }
 
 

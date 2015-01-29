@@ -34,6 +34,8 @@
 		<li><a href="#more" class="smoothScroll HL">More About Me <i class="fa fa-angle-right"></i></a></li>
 		<li><a href="#music" class="smoothScroll HL">Spotify <i class="fa fa-angle-right"></i></a></li>
 		<li><a href="#game" class="smoothScroll HL">JS Game <i class="fa fa-angle-right"></i></a></li>
+		<li><a href="#screenplay" class="smoothScroll HL">Dissertation Project Demo<i class="fa fa-angle-right"></i></a></li>
+		
 	</ul>
 </div>
 <!--/.slideout-menu-->
@@ -46,6 +48,9 @@
 </div>
 <!--/.header-->
 
+<p id="bgchange" class="greeting">Change Background?</p>
+		
+
 <a href="https://twitter.com/ger_leonard" target="_blank"><img src="img/twitter1.gif" id="bird"></a>
  <a href="mailto:leonardger@gmail.com" title="Email Me"><img class="centered-and-cropped" src="img/ger.png" alt="ger"></a>
 
@@ -54,7 +59,7 @@
 <div id="screen"></div> </a>
 
 <a id="home"></a>
-	<header class = "masthead">
+	<header class = "masthead norm">
 
 		<p class="menu-note">&larr; Menu</p>
 
@@ -113,16 +118,16 @@
 		
 			  <h2>More About Me</h2>
 			
-			  
-			  	<div class="question">What was the last novel you read?</div>
-			  	<p class="answer">Jonathan Franzen's <em>Freedom</em></p>
-			  	<div class="question">What novel are you currently reading?</div>
-			  	<p class="answer">JG Ballard's <em>Super-Cannes</em></p>
-			  	<div class="question">What's the last film you saw in the cinema?</div>
-			  	<p class="answer"><em>Foxcatcher</em></p>
-			  	<div class="question">What music are currently listening too?</div>
-			  	<p class="answer">Current favorites include <em>Richard Dawson</em> and <em>Donald Byrd</em></p> 
-			 
+			  <dl>
+			  	<dt>What was the last novel I read?</dt>
+			  	<dd>Jonathan Franzen's <em>Freedom</em></dd>
+			  	<dt>What novel am I currently reading?</dt>
+			  	<dd>JG Ballard's <em>Super-Cannes</em></dd>
+			  	<dt>What's the last film I saw in the cinema?</dt>
+			  	<dd><em>Foxcatcher</em></dd>
+			  	<dt>What music am I currently listening too?</dt>
+			  	<dd>Current favorites include <em>Richard Dawson</em> and <em>Donald Byrd</em></dd> 
+			 </dl>
 
 		</section>
 
@@ -144,6 +149,7 @@
 		</section>	
 		</div>	
 		
+
 		<a id ="game"></a>
 		<section class="container section game">
 		
@@ -151,6 +157,17 @@
 
 		 <a href="reaction.html" target="_blank"><img src="img/game.png" alt="game" /></a>
 		</section>
+
+		<div class="bgs">
+
+		<a id ="screenplay"></a>
+		<section class="container section screenplay">
+		
+			  <h2>Dissertation Project Demo</h2>
+<iframe width="640" height="390" src="http://www.youtube.com/embed/lxy0Et4Eaxo" frameborder="0" allowfullscreen></iframe>
+		
+		</section>
+		</div>
 
 		
 		
@@ -169,6 +186,35 @@
 
 
 <script type="text/javascript">
+/*
+
+$("#jack").click(function(){
+       $(".masthead").removeClass("norm").addClass("jack");
+                          
+    });
+
+   $("#norm").click(function(){
+       $(".masthead").removeClass("jack").addClass("norm");
+ 
+    });
+
+*/
+
+$('#bgchange').click(function() {
+	    if ($(this).text() == "Change Background?") 
+  { 
+     $(this).text("Change Back? HA!"); 
+  } 
+  else 
+  { 
+     $(this).text("Change Background?"); 
+  }; 
+
+    $('.masthead').toggleClass('jack norm')
+
+});
+
+
 
 
 
@@ -203,7 +249,8 @@ $('.slideout-menu ul li a').click(function(){
 
 
 
-	var divs = $('.masthead-intro, .masthead-heading, .menu-note, #bird, .centered-and-cropped');
+
+	var divs = $('.masthead-intro, .masthead-heading, .menu-note, #bird, .centered-and-cropped, .greeting');
 $(window).scroll(function(){
    if($(window).scrollTop()<200){
          divs.stop(true,true).fadeIn(10000);
@@ -211,6 +258,27 @@ $(window).scroll(function(){
          divs.stop(true,true).fadeOut(10000);
    }
 });
+
+	(function() {
+	
+	$('dd').filter(':nth-child(n+4)').addClass('hide');
+
+	$('dl').on('mouseenter', 'dt', function() {
+		$(this)
+			.next()
+				.slideDown(200)
+				.siblings('dd')
+					.slideUp(200);
+	});
+})();
+
+
+
+  
+
+  
+
+    
 </script>
 
 
