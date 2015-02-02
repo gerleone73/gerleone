@@ -78,70 +78,23 @@ html, body {
     margin: 0;
 }
 
-#bgchange{
-
-   position: fixed;
-    left: 50%;
-     -webkit-transform: translateX(-50%);
-    transform: translateX(-50%);    top:75%;
-    font-family: 'Gentium Basic', serif;
-
-  top:5%;
-  text-transform: uppercase;
-  font-size: 1em;
-  font-weight: 600;
-  letter-spacing: 0.05em;
- 
-  z-index:1000;
-  color:#c5c5c5;;
-  width:13em;
-  line-height: 3em;
-  text-align: center;
-   border: 1px solid #c5c5c5;
-   
-}
-
-#bgchange:hover {
-
-  cursor: pointer;
-  color: white;
-   border: 1px solid white;
-}
+/* ---------------------------------------------*/
 
 
-
-
-
-.centered-and-cropped { 
-  position:fixed;
-  top:.1em;
-  right:5em;
-  z-index:1000;
-   width: 4em; 
-   height:auto; 
-   border-radius: 50%; 
-   padding:.5em;
- }
-.centered-and-cropped:hover{
-  background:white;
-}
-
-
-#bird{
-  width:5em;
-  height:auto;
-  position:fixed;
-  top:0;
-  right:0;
-  z-index:1000;
-  border-radius: 50%;
-}
-
-#bird:hover{
-  background:white;
-  border-radius:50%;
+body {
+    color: #47423f;
+    font-size: 1.25em;
+ font-family: 'Gentium Basic', serif;
+  font-weight:300;
+  background-color:#FFFFF1;
+  margin: 0;
+  padding:0;
+  overflow-x:hidden;
+  
 
 }
+
+/* Slideout Menu */
 
 .slideout-menu {
   position: fixed;
@@ -202,7 +155,7 @@ html, body {
   color: #fff;
 }
 
-.active{
+.slideout-menu ul li a.active{
  background: rgba(50,50,50,1);
   color: #fff;
   font-weight: bold;
@@ -215,8 +168,7 @@ html, body {
   right: 10px;
   opacity: .5;
 }
-
-
+/*---HAMBURGER----------------------------------*/
 
 .hamburger {
     background: rgba(50,50,50,1);
@@ -253,46 +205,102 @@ html, body {
   .hamburger .slideout-menu-toggle .icon-bar+.icon-bar:hover {
     color: #000;
   }
-  
-  
+
+/*--BGCHANGE-------*/
 
 
-.menu-note{
-  position:fixed;
-  top:40px;
-  left: 130px;
-  font-size:1.25em;
-  font-weight: 600;
+#bgchange{
+
+   position: fixed;
+    left: 50%;
+     -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);    top:75%;
+    font-family: 'Gentium Basic', serif;
+
+  top:5%;
   text-transform: uppercase;
+  font-size: 1em;
+  font-weight: 600;
   letter-spacing: 0.05em;
-  font-family: 'Stint Ultra Expanded', cursive;
+ 
+  z-index:1000;
+  color:#c5c5c5;;
+  width:13em;
+  line-height: 3em;
+  text-align: center;
+   border: 1px solid #c5c5c5;
+   
+}
+
+#bgchange:hover {
+
+  cursor: pointer;
+  color: white;
+   border: 1px solid white;
+}
+
+/* Me & TWITTER ICONS---------------*/
+
+
+.me { 
+  position:fixed;
+  top:.1em;
+  right:5em;
+  z-index:1000;
+   width: 4em; 
+   height:auto; 
+   border-radius: 50%; 
+   background-color:rgba(240,240,240,.3);
+    padding:.5em;
+ }
+.me:hover{
+  background:white;
+ 
+}
+
+
+.bird{
+  width:4em;
+  height:auto;
+  position:fixed;
+  top:0;
+  right:0;
+  z-index:1000;
+  border-radius: 50%;
+ background-color: rgba(240,240,240,.3);
+    padding:.5em;
+}
+
+.bird:hover{
+  background:white;
+
 
 }
+
+.Gerry{
+   width: 7em; 
+   height:auto; 
+   border-radius: 50%; 
+   padding:.5em;
+}
+
+
+/* SCREEN ----------*/
 
 #screen{
   width: 100%;
   height:100%;
   position: fixed;
-  background-color: rgba(0,0,0,0);
+  background: url(http://www.transparenttextures.com/patterns/cream-pixels.png);
+  opacity:.5;
+
 }
 
+  
+ /* FULL SCREEN IMAGES -----*/ 
 
-
-.body {
-    color: #47423f;
-    font-size: 1.25em;
- font-family: 'Gentium Basic', serif;
-  font-weight:300;
-  background-color:#FFFFF1;
-  margin: 0;
-  padding:0;
-  overflow-x:hidden;
-}
-
-
-
-.norm{
-  background-image: url(http://www.icanbecreative.com/res/cinemagraphs/cinematography-gifs-9.gif);
+ .norm{
+  background-image: url(../img/cinematography-gifs-9.gif);
     position: fixed; 
     background-size: cover;
    -webkit-background-size: cover;
@@ -308,10 +316,11 @@ html, body {
   min-height: 100%;
   z-index:-1;
   text-align: center;
-
+ 
 }
+
 .jack{
-  background-image:url(http://all-that-is-interesting.com/wordpress/wp-content/uploads/2013/06/kubrick-cinemagraphs-shining-4.gif);
+  background-image:url(../img/kubrick-cinemagraphs-shining-4.gif);
    position: fixed; 
     background-size: cover;
    -webkit-background-size: cover;
@@ -327,24 +336,30 @@ html, body {
   min-height: 100%;
   z-index:-1;
   text-align: center;
+ display:none;
 }
 
-.none{
-  display:none;
-}
+
+/* MASTHEAD --------*/
 
 .masthead-intro{
  position: fixed;
     left: 50%;
      -webkit-transform: translateX(-50%);
-    transform: translateX(-50%);    top:75%;
+    transform: translateX(-50%);    
     font-family: 'Gentium Basic', serif;
 
   top:72%;
 
+
   letter-spacing: 0.05em;
   font-family: 'Stint Ultra Expanded', cursive;
   font-size:2.5em;
+}
+
+#click{
+  font-size: .5em;
+  padding-left:2em;
 }
 
 .masthead-heading{
@@ -361,6 +376,7 @@ html, body {
 }
 
 .greeting{
+  color:white;
    -webkit-animation: fadein 6s; /* Safari, Chrome and Opera > 12.1 */
        -moz-animation: fadein 10s; /* Firefox < 16 */
         -ms-animation: fadein 10s; /* Internet Explorer */
@@ -397,11 +413,27 @@ html, body {
     to   { opacity: 1; }
 }
 
-  
+
+.menu-note{
+  position:fixed;
+  top:1.5em;
+  left: 8em;
+  font-size:1.25em;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-family: 'Stint Ultra Expanded', cursive;
+  color:white;
+
+}
+
+
+/* PAGE ------------------*/
+
 /*VERY STRANGE, without the top:80em the screen is not clickable!!*/
 .page{
   width:100%;
-  top:80em; /* TIS IS NEEDED, why? */
+  top:80em; /* THIS IS NEEDED, why? */
   position: relative;
   padding-top:118em;
 background: -moz-linear-gradient(top,  rgba(210,210,210,0) 0%, rgba(210,210,210,0.1) 11%, rgba(210,210,210,0.15) 12%, rgba(213,213,213,0.9) 28%, rgba(215,215,215,1) 41%, rgba(226,226,226,1) 100%); /* FF3.6+ */
@@ -411,20 +443,11 @@ background: -o-linear-gradient(top,  rgba(210,210,210,0) 0%,rgba(210,210,210,0.1
 background: -ms-linear-gradient(top,  rgba(210,210,210,0) 0%,rgba(210,210,210,0.1) 11%,rgba(210,210,210,0.15) 12%,rgba(213,213,213,0.9) 28%,rgba(215,215,215,1) 41%,rgba(226,226,226,1) 100%); /* IE10+ */
 background: linear-gradient(to bottom,  rgba(210,210,210,0) 0%,rgba(210,210,210,0.1) 11%,rgba(210,210,210,0.15) 12%,rgba(213,213,213,0.9) 28%,rgba(215,215,215,1) 41%,rgba(226,226,226,1) 100%); /* W3C */
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00d2d2d2', endColorstr='#e2e2e2',GradientType=0 ); /* IE6-9 */
-
   
 }
 
-#click{
-  font-size: .5em;
-  padding-left:2em;
-}
 
-
-
-img{ 
-  width: 100%;
-height: auto;}
+/*CONTAINER----------*/
 
 .container{
   max-width: 46em;
@@ -433,35 +456,19 @@ height: auto;}
  
 }
 
+/*SECTION----------*/
 
-.bgs{
-  width:100%;
-  background-color: #47423f;
-  color: white;
-}
 .section{
- padding-top: 5em;
- padding-bottom: 5em;
+
  height:100vh;
   min-height: 100vh;
   display:block;
   min-height:100%;
-}
-
-.space{
-  padding: 0 8em;
-}
-
-/* .location{
-  background-color: orange;
-}*/
-
-.iframe{
-  margin-bottom: 2em; 
+  overflow: hidden;    /* ADDED ++++++++++++++++++++++++++++*/
 }
 
 .section > h2{
-  padding-top: 3em;
+  padding-top:1.5em;
  font-family: 'Stint Ultra Expanded', cursive;
   letter-spacing: 0.1em;
   font-size: 2em;
@@ -474,6 +481,154 @@ height: auto;}
     letter-spacing: 0.05em;
     line-height: 1.5em;
     margin-bottom: 1em;
+}
+
+.game > p, .players > p, .screenplay> p, .kraftwerk > p {
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
+
+
+/*BGS ------------*/
+
+  
+.bgs{
+  width:100%;
+  background-color:#F5F5F5!important;
+ 
+   background: url(http://www.transparenttextures.com/patterns/cream-pixels.png);
+}
+
+.bgsWhite{
+  width:100%;
+background-color: #fff!important;
+
+}
+
+
+/* Data List & Data Terms (more section) ---*/
+
+dt{
+  cursor: pointer;
+  background: #e3e3e3;
+    border-bottom: 1px solid #c5c5c5;
+    border-top: 1px solid white;
+  font-family: 'Stint Ultra Expanded', cursive;
+  letter-spacing: 0.05em;
+  font-size: 1.25em;
+  line-height: 1.5em;
+  padding-left:.5em;
+  margin-left: 0;
+ 
+}
+
+dd{
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    line-height: 2em;
+    padding-left:.75em;  
+}
+
+.hide{
+  display:none;
+}
+
+
+/* IFRAME-------------*/
+
+.iframe{
+  margin-bottom: 2em; 
+}
+
+.youtubeContainer{
+  position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 60%
+}
+
+.video {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+/* IMG (NOTE TOO GENERIC)-----*/
+
+
+img{ 
+  width: 100%;
+  height: auto;
+}
+
+
+
+/* HADUKEN___________________*/
+
+
+.ryumain{
+
+  margin-top: 110px;
+  margin-left: -150px;
+  min-width: 100%;
+  height: 30em;
+}
+
+.ryu{
+  float:left;
+}
+
+
+.ryu-ready, .ryu-still, .ryu-throwing, .ryu-cool {
+  width: 659px;
+  height: 494px;
+}
+
+.ryu-ready, .ryu-throwing, .ryu-cool {
+  display: none;
+} 
+
+.ryu-cool{
+  background-image: url('../images/ryu-cool.gif');
+}
+
+.ryu-ready {
+  background-image: url('../images/ryu-ready-position.gif');
+}
+
+.ryu-still {
+  background-image: url('../images/ryu-standing-still.png');
+}
+
+.ryu-throwing {
+  background-image: url('../images/ryu-throwing-hadouken.png');
+}
+
+.hadouken, .ryu-ready, .ryu-still, .ryu-throwing, .ryu-cool {
+  background-repeat: no-repeat;
+}
+
+.hadouken {
+  background-image: url('../images/hadouken.gif');
+  width: 156px; 
+  height: 90px;
+  display: none;
+  top:172px;
+  left:-136px;
+  float: left;
+  position:relative;
+}
+
+/* FOOTER -------------*/
+
+
+.content-footer{
+ background-color:rgba(255,255,255,1);
+ text-align:center;
+ opacity:0.5;
+  padding: 5em 0;
+ margin: 4em -1em -3em -2em;
 }
 
 
@@ -510,64 +665,40 @@ height: auto;}
 
 
 
-
-dt{
-  cursor: pointer;
-  background: #e3e3e3;
-    border-bottom: 1px solid #c5c5c5;
-    border-top: 1px solid white;
-  font-family: 'Stint Ultra Expanded', cursive;
-  letter-spacing: 0.05em;
-  font-size: 1.25em;
-  line-height: 1.5em;
-  padding-left:.5em;
-  margin-left: 0;
- 
-}
-
-dd{
-    font-weight: 600;
-    letter-spacing: 0.05em;
-    line-height: 2em;
-    padding-left:.75em;
-
-  
-}
-
-
-.hide{
-  display:none;
-}
-
-
-/* removed .players {} */
-
-.content-footer{
- background-color:rgba(255,255,255,1);
- text-align:center;
- opacity:0.5;
-  padding: 5em 0;
- margin: 4em -1em -3em -2em;
-}
+/* MEDIA QUERIES_____________________*/
 
 @media only screen and (min-width: 320px) and (max-width: 479px){
+
+ html. body{
+  margin:0;
+  padding:0;
+ }
+ .container{
+  padding: 0 3.5em;
+ }
 
 
   .spotify{
     height:100px;
     padding-top: 1em;
     }
-
+#bgchange{
+  font-size: .7em;
+  line-height: 2em;
+  width: 14em;
+}
 
   .body{
     font-size:1em;
   }
 
-  #bird{
-  width:3.25em;
+  .bird{
+    top:0em;
+  width:2.7em;
+   padding: .35em;
 }
 
-.centered-and-cropped{
+.me{
   position: fixed;
  width: 2.7em;
  top:0em;
@@ -594,9 +725,7 @@ dd{
   .page{
     top:15em;
     padding-top: 0em;
-    padding-left: 1em;
-    padding-right: 1em;
-    background-color:white;
+  background-color:rgba(226,226,226,1);
   }
   .iframe{ 
     width:100%; height:auto;
@@ -609,15 +738,18 @@ dd{
   .slideout-menu{
     background: rgba(40,40,40, 1);
   }
-  .menu-note{
-  left:4em;
+  .menu-note {
+    left:4em;
   top:2em;
   font-size: .75em;
 }
 
-.section{padding: 0 7%;
-min-height: 100%;}
+.section{
+min-height: 100%;
+min-height: 100%;
+font-size: .7em;
 }
+
 
 
   .hamburger .slideout-menu-toggle .icon-bar {
@@ -638,7 +770,7 @@ min-height: 100%;}
   .body{
     font-size:1em;
   }
-   #bird{
+   .bird{
   width:3.25em;
   }
 
